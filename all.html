@@ -1,0 +1,45 @@
+{% extends 'homebase.html' %}
+{% block content1 %}
+<h1>All Record</h1>
+{{msg}}
+<center>
+    <table id="table" border=1>
+        <tr>
+            <th id="th">Name</th>
+            <th id="th">Email</th>
+            <th id="th">Subject</th>
+            <th id="th">Message</th>
+        </tr>
+        {% for x in data  %}
+            <tr>
+                <td id="td">{{x.username}}</td>
+                <td id="td">{{x.email}}</td>
+                <td id="td">{{x.subject}}</td>
+                <td id="td">{{x.message}}</td>
+            </tr>
+            {% endfor %}
+    </table>
+    <table>
+        <tr>
+            <th id="th">Name</th>
+            <th id="th">Destination</th>
+            <th id="th">Activities</th>
+            <th id="th">Date</th>
+
+            </tr>
+            {% for x in data1  %}
+            <tr>
+                <td id="td">{{x.name}}</td>
+                <td id="td">{{x.destination}}</td>
+                <td id="td">{{x.activities}}</td>
+                <td id="td">{{x.date}}</td>
+                
+            </tr>
+            {% endfor %}
+        </table>
+</center>
+     
+            
+{% endblock content1 %}
+{% block footer %}<h1 id="hh">Developed By Tulsi Shah || Home Page</h1>
+{% endblock footer %}
